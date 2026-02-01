@@ -12,7 +12,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-2 bg-white">
       <div className="container mx-auto px-8 md:px-12 lg:px-16 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">
@@ -31,7 +31,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
           {stats.map((stat, index) => (
             <div
               key={index}
