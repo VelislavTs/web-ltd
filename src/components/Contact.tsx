@@ -28,70 +28,70 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-900">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <section id="contact" className="py-16 bg-slate-900">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             {t.contact.title}
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-2xl text-slate-300 max-w-3xl mx-auto">
             {t.contact.subtitle}
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">
+            <h3 className="text-3xl font-bold text-white mb-8">
               {language === 'en' ? 'Get in Touch' : 'Свържете се с нас'}
             </h3>
-            <p className="text-slate-300 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-300 mb-10 leading-relaxed">
               {language === 'en'
                 ? "Have a project in mind? We'd love to hear about it. Send us a message and we'll respond as soon as possible."
                 : 'Имате проект? Бихме искали да научим повече. Изпратете ни съобщение и ще отговорим възможно най-скоро.'}
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="text-blue-400" size={24} />
+            <div className="space-y-8">
+              <div className="flex items-start space-x-5">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="text-blue-400" size={28} />
                 </div>
                 <div>
-                  <div className="font-semibold text-white mb-1">Email</div>
+                  <div className="text-lg font-semibold text-white mb-2">Email</div>
                   <a
                     href="mailto:info@webltd.com"
-                    className="text-slate-300 hover:text-blue-400 transition-colors"
+                    className="text-lg text-slate-300 hover:text-blue-400 transition-colors"
                   >
                     info@webltd.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="text-blue-400" size={24} />
+              <div className="flex items-start space-x-5">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="text-blue-400" size={28} />
                 </div>
                 <div>
-                  <div className="font-semibold text-white mb-1">
+                  <div className="text-lg font-semibold text-white mb-2">
                     {language === 'en' ? 'Phone' : 'Телефон'}
                   </div>
                   <a
                     href="tel:+359888123456"
-                    className="text-slate-300 hover:text-blue-400 transition-colors"
+                    className="text-lg text-slate-300 hover:text-blue-400 transition-colors"
                   >
                     +359 888 123 456
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="text-blue-400" size={24} />
+              <div className="flex items-start space-x-5">
+                <div className="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="text-blue-400" size={28} />
                 </div>
                 <div>
-                  <div className="font-semibold text-white mb-1">
+                  <div className="text-lg font-semibold text-white mb-2">
                     {language === 'en' ? 'Location' : 'Локация'}
                   </div>
-                  <div className="text-slate-300">
+                  <div className="text-lg text-slate-300">
                     Sofia, Bulgaria
                   </div>
                 </div>
@@ -100,9 +100,9 @@ export default function Contact() {
           </div>
 
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-7">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-white text-lg font-medium mb-3">
                   {t.contact.name}
                 </label>
                 <input
@@ -112,13 +112,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full px-5 py-4 text-lg bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
                   placeholder={language === 'en' ? 'John Doe' : 'Иван Иванов'}
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-white text-lg font-medium mb-3">
                   {t.contact.email}
                 </label>
                 <input
@@ -128,13 +128,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full px-5 py-4 text-lg bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
                   placeholder={language === 'en' ? 'john@example.com' : 'ivan@example.com'}
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-white text-lg font-medium mb-3">
                   {t.contact.message}
                 </label>
                 <textarea
@@ -143,8 +143,8 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                  rows={6}
+                  className="w-full px-5 py-4 text-lg bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                   placeholder={language === 'en' ? 'Tell us about your project...' : 'Разкажете ни за вашия проект...'}
                 ></textarea>
               </div>
@@ -152,7 +152,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className={`w-full flex items-center justify-center space-x-2 py-4 rounded-lg font-semibold transition-all ${
+                className={`w-full flex items-center justify-center space-x-2 py-5 text-lg rounded-lg font-semibold transition-all ${
                   isSubmitted
                     ? 'bg-green-500 text-white'
                     : 'bg-blue-500 hover:bg-blue-600 text-white'
@@ -163,7 +163,7 @@ export default function Contact() {
                 ) : (
                   <>
                     <span>{t.contact.send}</span>
-                    <Send size={18} />
+                    <Send size={20} />
                   </>
                 )}
               </button>

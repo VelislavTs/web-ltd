@@ -48,66 +48,66 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+    <section id="pricing" className="py-16 bg-slate-50">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
             {t.pricing.title}
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-2xl text-slate-600 max-w-3xl mx-auto">
             {t.pricing.subtitle}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
+              className={`relative bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                 plan.popular ? 'border-2 border-blue-500' : ''
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-500 text-white px-5 py-2 rounded-full text-base font-semibold">
                     Most Popular
                   </span>
                 </div>
               )}
 
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              <div className="mb-8">
+                <h3 className="text-3xl font-bold text-slate-900 mb-3">
                   {plan.name}
                 </h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-600 text-base">
                   {plan.description}
                 </p>
               </div>
 
-              <div className="mb-6 space-y-4">
-                <div className="bg-slate-50 rounded-lg p-4">
-                  <div className="text-xs font-semibold text-slate-500 uppercase mb-1">
+              <div className="mb-8 space-y-5">
+                <div className="bg-slate-50 rounded-lg p-5">
+                  <div className="text-sm font-semibold text-slate-500 uppercase mb-2">
                     {t.pricing.upfront}
                   </div>
-                  <div className="text-3xl font-bold text-slate-900">
+                  <div className="text-4xl font-bold text-slate-900">
                     {plan.upfrontPrice}
                   </div>
                 </div>
 
                 {!plan.isContact && (
-                  <div className="bg-blue-50 rounded-lg p-4 border-2 border-blue-200">
-                    <div className="text-xs font-semibold text-blue-600 uppercase mb-1">
+                  <div className="bg-blue-50 rounded-lg p-5 border-2 border-blue-200">
+                    <div className="text-sm font-semibold text-blue-600 uppercase mb-2">
                       {t.pricing.monthly}
                     </div>
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <span className="text-3xl font-bold text-slate-900">
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <span className="text-4xl font-bold text-slate-900">
                         {plan.monthlyPrice}
                       </span>
-                      <span className="text-slate-600 text-sm">
+                      <span className="text-slate-600 text-base">
                         {t.pricing.perMonth}
                       </span>
                     </div>
-                    <div className="text-xs text-slate-600">
+                    <div className="text-sm text-slate-600">
                       {t.pricing.monthlyIncludes}
                     </div>
                   </div>
@@ -116,7 +116,7 @@ export default function Pricing() {
 
               <button
                 onClick={scrollToContact}
-                className={`w-full py-3 rounded-lg font-semibold transition-colors mb-8 ${
+                className={`w-full py-4 rounded-lg text-lg font-semibold transition-colors mb-10 ${
                   plan.popular
                     ? 'bg-blue-500 hover:bg-blue-600 text-white'
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-900'
@@ -127,11 +127,11 @@ export default function Pricing() {
 
               <div className="space-y-4">
                 {plan.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center mt-0.5">
-                      <Check className="text-blue-600" size={14} />
+                  <div key={featureIndex} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center mt-0.5">
+                      <Check className="text-blue-600" size={16} />
                     </div>
-                    <span className="text-slate-700 text-sm">
+                    <span className="text-slate-700 text-base">
                       {feature}
                     </span>
                   </div>
@@ -142,7 +142,7 @@ export default function Pricing() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-slate-600">
+          <p className="text-slate-600 text-lg">
             {language === 'en'
               ? 'All prices are estimates. Final pricing depends on project scope and requirements.'
               : 'Всички цени са ориентировъчни. Крайната цена зависи от обхвата и изискванията на проекта.'}
