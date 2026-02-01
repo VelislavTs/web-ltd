@@ -51,44 +51,37 @@ export default function Process() {
 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform -translate-x-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-1 bg-gradient-to-b from-blue-500 via-purple-500 via-emerald-500 via-orange-500 to-pink-500 transform -translate-x-1/2 opacity-20"></div>
 
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`relative mb-12 last:mb-0 ${
-                  index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'
-                }`}
+                className="relative mb-8 last:mb-0"
               >
-                <div className={`flex items-start gap-8 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}>
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-shadow relative">
-                      <div className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-white font-bold text-lg">{index + 1}</span>
-                      </div>
-                      <div className={`flex items-center gap-4 mb-4 ${
-                        index % 2 === 0 ? 'md:flex-row-reverse md:justify-end' : ''
-                      }`}>
-                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center flex-shrink-0`}>
-                          <step.icon className="text-white" size={28} />
+                <div className="flex items-center gap-6 md:gap-8">
+                  <div className={`hidden md:flex w-16 h-16 rounded-full bg-gradient-to-br ${step.color} items-center justify-center flex-shrink-0 shadow-lg z-10 ring-4 ring-white`}>
+                    <span className="text-white font-bold text-2xl">{index + 1}</span>
+                  </div>
+
+                  <div className="flex md:hidden w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 items-center justify-center flex-shrink-0 shadow-lg">
+                    <span className="text-white font-bold text-xl">{index + 1}</span>
+                  </div>
+
+                  <div className="flex-1">
+                    <div className="bg-slate-50 rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
+                          <step.icon className="text-white" size={24} />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 pr-12">
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-900">
                           {step.title}
                         </h3>
                       </div>
-                      <p className="text-slate-600 leading-relaxed">
+                      <p className="text-slate-600 leading-relaxed ml-0 md:ml-16">
                         {step.description}
                       </p>
                     </div>
                   </div>
-
-                  <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full items-center justify-center z-10">
-                    <span className="text-blue-600 font-bold text-lg">{index + 1}</span>
-                  </div>
-
-                  <div className="flex-1 hidden md:block"></div>
                 </div>
               </div>
             ))}
