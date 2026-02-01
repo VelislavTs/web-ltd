@@ -58,12 +58,12 @@ export const translations: Record<'en' | 'bg', Translation> = {
       viewProject: 'See Project',
     },
     about: {
-      title: 'Hi. We make web.',
-      subtitle: 'The local bakery of websites',
+      title: 'Hi. We\'re bread makers. Well, web makers.',
+      subtitle: 'Same thing, really.',
       description: [
-        'We\'re here for small businesses - the local shops, family businesses, and startups that make our communities work. Big agencies are expensive and slow. We keep things simple.',
-        'Quick delivery, honest pricing, and we actually answer when you call. No confusing jargon, just clean websites that help your business grow.',
-        'Low monthly costs because we want you to succeed, not drain your budget. Simple as that.',
+        'For centuries, bread has been the foundation of communities - made with care, shared with neighbors, sustaining life. That craft, that patience, that human touch? It never went away. It just learned to code.',
+        'We bridge the gap between the old and the new. Between the simple warmth of fresh bread and the infinite possibilities of technology. We take the timeless values of the local baker - honest work, fair prices, knowing your name - and bring them into the digital age.',
+        'Big agencies build websites. We build digital homes for your business. The kind where people feel welcome. The kind that help communities thrive. Just like bread, made fresh, made right, made for you.',
       ],
       stats: {
         years: 'Years Building',
@@ -240,12 +240,12 @@ export const translations: Record<'en' | 'bg', Translation> = {
       viewProject: 'Виж проект',
     },
     about: {
-      title: 'Здравей. Ние правим уеб.',
-      subtitle: 'Местната фурна за сайтове',
+      title: 'Знаете ли как наричат хлебопекар в Перник?',
+      subtitle: 'Уеб дизайнер. Истината е, че не е много различно.',
       description: [
-        'Тук сме за малките бизнеси - местните магазини, семейните предприятия и стартъпите, които карат общностите ни да работят. Големите агенции са скъпи и бавни. Ние правим нещата просто.',
-        'Бърза доставка, честни цени и наистина вдигаме телефона. Без технически приказки, само чисти сайтове, които помагат на бизнеса ви да расте.',
-        'Ниски месечни разходи, защото искаме да успеете, а не да изсмучваме бюджета ви. Толкова просто.',
+        'Векове наред хлябът е бил основата на общностите - правен с грижа, споделян със съседи, поддържащ живота. Този занаят, това търпение, този човешки докосване? Никога не е изчезвал. Просто е научил да пише код.',
+        'Ние свързваме старото и новото. Между простата топлина на пресен хляб и безкрайните възможности на технологията. Взимаме вечните ценности на местния хлебопекар - честна работа, справедливи цени, познаваме името ви - и ги внасяме в дигиталната епоха.',
+        'Големите агенции строят сайтове. Ние строим дигитални домове за вашия бизнес. Такива, в които хората се чувстват добре дошли. Такива, които помагат на общностите да процъфтяват. Точно като хляб - направен пресен, направен както трябва, направен за вас.',
       ],
       stats: {
         years: 'Години строим',
