@@ -4,30 +4,39 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function Pricing() {
   const { t, language } = useLanguage();
 
-  const plans = [
+  const plans: Array<{
+    name: string;
+    upfrontPrice: string;
+    monthlyPrice: string;
+    description: string;
+    features: string[];
+    popular: boolean;
+    isContact?: boolean;
+  }> = [
     {
       name: t.pricing.starter.name,
-      price: language === 'en' ? '$1,200' : '2,200 лв',
-      period: t.pricing.oneTime,
+      upfrontPrice: language === 'en' ? '$1,200' : '2,200 лв',
+      monthlyPrice: t.pricing.starter.monthlyPrice,
       description: t.pricing.starter.description,
       features: t.pricing.starter.features,
       popular: false,
     },
     {
       name: t.pricing.professional.name,
-      price: language === 'en' ? '$3,500' : '6,400 лв',
-      period: t.pricing.oneTime,
+      upfrontPrice: language === 'en' ? '$3,500' : '6,400 лв',
+      monthlyPrice: t.pricing.professional.monthlyPrice,
       description: t.pricing.professional.description,
       features: t.pricing.professional.features,
       popular: true,
     },
     {
       name: t.pricing.enterprise.name,
-      price: t.pricing.contact,
-      period: '',
+      upfrontPrice: t.pricing.contact,
+      monthlyPrice: t.pricing.enterprise.monthlyPrice,
       description: t.pricing.enterprise.description,
       features: t.pricing.enterprise.features,
       popular: false,
+      isContact: true,
     },
   ];
 
@@ -75,17 +84,34 @@ export default function Pricing() {
                 </p>
               </div>
 
-              <div className="mb-6">
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-bold text-slate-900">
-                    {plan.price}
-                  </span>
-                  {plan.period && (
-                    <span className="ml-2 text-slate-600">
-                      {plan.period}
-                    </span>
-                  )}
+              <div className="mb-6 space-y-4">
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-xs font-semibold text-slate-500 uppercase mb-1">
+                    {t.pricing.upfront}
+                  </div>
+                  <div className="text-3xl font-bold text-slate-900">
+                    {plan.upfrontPrice}
+                  </div>
                 </div>
+
+                {!plan.isContact && (
+                  <div className="bg-blue-50 rounded-lg p-4 border-2 border-blue-200">
+                    <div className="text-xs font-semibold text-blue-600 uppercase mb-1">
+                      {t.pricing.monthly}
+                    </div>
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-3xl font-bold text-slate-900">
+                        {plan.monthlyPrice}
+                      </span>
+                      <span className="text-slate-600 text-sm">
+                        {t.pricing.perMonth}
+                      </span>
+                    </div>
+                    <div className="text-xs text-slate-600">
+                      {t.pricing.monthlyIncludes}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <button

@@ -53,19 +53,25 @@ export interface Translation {
     perMonth: string;
     oneTime: string;
     contact: string;
+    upfront: string;
+    monthly: string;
+    monthlyIncludes: string;
     starter: {
       name: string;
       description: string;
+      monthlyPrice: string;
       features: string[];
     };
     professional: {
       name: string;
       description: string;
+      monthlyPrice: string;
       features: string[];
     };
     enterprise: {
       name: string;
       description: string;
+      monthlyPrice: string;
       features: string[];
     };
   };
