@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-6 shadow-sm border border-blue-100 animate-fade-in">
                 <Heart className="text-blue-500" size={18} fill="currentColor" />
-                <span className="text-sm font-medium text-blue-900">Built with care for your success</span>
+                <span className="text-sm font-medium text-blue-900">{t.hero.badge}</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight animate-slide-up">
@@ -70,13 +70,13 @@ export default function Hero() {
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                     <Users className="text-blue-600" size={16} />
                   </div>
-                  <span className="font-medium">50+ Happy Clients</span>
+                  <span className="font-medium">{t.hero.clients}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                     <Zap className="text-blue-600" size={16} />
                   </div>
-                  <span className="font-medium">Fast Delivery</span>
+                  <span className="font-medium">{t.hero.delivery}</span>
                 </div>
               </div>
             </div>
@@ -91,8 +91,8 @@ export default function Hero() {
                       <Sparkles className="text-white" size={28} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">Beautiful Design</h3>
-                      <p className="text-sm text-slate-600">Interfaces that users love</p>
+                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.card1.title}</h3>
+                      <p className="text-sm text-slate-600">{t.hero.card1.description}</p>
                     </div>
                   </div>
                 </div>
@@ -104,8 +104,8 @@ export default function Hero() {
                       <Zap className="text-white" size={28} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">Lightning Fast</h3>
-                      <p className="text-sm text-slate-600">Optimized for performance</p>
+                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.card2.title}</h3>
+                      <p className="text-sm text-slate-600">{t.hero.card2.description}</p>
                     </div>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ export default function Hero() {
                       <Heart className="text-white" size={28} fill="currentColor" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">We Care</h3>
-                      <p className="text-sm text-slate-600">Your success is our mission</p>
+                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.card3.title}</h3>
+                      <p className="text-sm text-slate-600">{t.hero.card3.description}</p>
                     </div>
                   </div>
                 </div>
