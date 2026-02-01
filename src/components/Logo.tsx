@@ -1,9 +1,14 @@
 interface LogoProps {
   className?: string;
   showText?: boolean;
+  variant?: 'light' | 'dark';
 }
 
-export default function Logo({ className = '', showText = true }: LogoProps) {
+export default function Logo({ className = '', showText = true, variant = 'light' }: LogoProps) {
+  const textColors = variant === 'dark'
+    ? { primary: 'text-white', secondary: 'text-blue-400' }
+    : { primary: 'text-slate-900', secondary: 'text-blue-600' };
+
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
       <svg
@@ -56,8 +61,8 @@ export default function Logo({ className = '', showText = true }: LogoProps) {
 
       {showText && (
         <span className="text-2xl font-bold">
-          <span className="text-white">Web</span>
-          <span className="text-blue-400">Ltd</span>
+          <span className={textColors.primary}>Web</span>
+          <span className={textColors.secondary}>Ltd</span>
         </span>
       )}
     </div>

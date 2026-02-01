@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="mb-4">
-              <Logo />
+              <Logo variant="dark" />
             </div>
             <p className="text-slate-400 leading-relaxed">
               {t.footer.tagline}
