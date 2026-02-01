@@ -58,7 +58,7 @@ export const translations: Record<'en' | 'bg', Translation> = {
       viewProject: 'See Project',
     },
     about: {
-      title: 'Hey! 👋 We\'re Web Ltd.',
+      title: 'Hey! 👋 We\'re Web.',
       subtitle: 'Your friendly neighborhood web team',
       description: [
         'We\'re here for the small guys - the local shops, family businesses, and startups that make our communities special. Big agencies charge crazy prices and take forever. We do things differently.',

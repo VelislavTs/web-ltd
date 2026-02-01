@@ -62,7 +62,6 @@ export default function Logo({ className = '', showText = true, variant = 'light
       {showText && (
         <span className="text-2xl font-bold">
           <span className={textColors.primary}>Web</span>
-          <span className={textColors.secondary}>Ltd</span>
         </span>
       )}
     </div>

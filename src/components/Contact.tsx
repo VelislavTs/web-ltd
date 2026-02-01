@@ -58,7 +58,7 @@ export default function Contact() {
                 <div>
                   <div className="font-semibold text-white mb-1">Email</div>
                   <a
-                    href="mailto:info@webltd.com"
+                    href="mailto:info@web-bg.tech"
                     className="text-slate-300 hover:text-blue-400 transition-colors"
                   >
                     info@webltd.com
