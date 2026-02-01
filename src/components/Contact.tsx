@@ -75,10 +75,10 @@ export default function Contact() {
                     {language === 'en' ? 'Phone' : 'Телефон'}
                   </div>
                   <a
-                    href="tel:+359888123456"
+                    href="tel:+359895115229"
                     className="text-slate-300 hover:text-blue-400 transition-colors"
                   >
-                    +359 888 123 456
+                    +359 895 115 229
                   </a>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Contact() {
                     {language === 'en' ? 'Location' : 'Локация'}
                   </div>
                   <div className="text-slate-300">
-                    Sofia, Bulgaria
+                    {language === 'en' ? 'Sofia, Bulgaria' : 'София, България'}
                   </div>
                 </div>
               </div>

@@ -68,11 +68,11 @@ export default function Pricing() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-                    {language === "en" ? "Most Popular" : "Най-предпочитано"}
-                  </span>
-                </div>
+                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-6 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap">
+                      Най-предпочитано
+                    </span>
+                  </div>
               )}
 
               <div className="mb-6">
@@ -122,7 +122,7 @@ export default function Pricing() {
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-900'
                 }`}
               >
-                {language === "en" ? "Get Started" : "Да поговорим"}
+                {language === "en" ? "Get Started" : "Нека започваме"}
               </button>
 
               <div className="space-y-3">
