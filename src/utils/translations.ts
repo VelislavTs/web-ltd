@@ -15,6 +15,26 @@ export const translations: Record<'en' | 'bg', Translation> = {
       title: 'Your Local Web Partner',
       subtitle: 'We help small businesses shine online! Beautiful websites, lightning-fast delivery, and prices that won\'t break the bank. Let\'s grow your business together.',
       cta: 'Let\'s Chat!',
+      badge: 'Built with',
+      badgeEnd: 'for your success',
+      trustIndicators: {
+        clients: '50+ Happy Clients',
+        delivery: 'Fast Delivery',
+      },
+      cards: {
+        design: {
+          title: 'Beautiful Design',
+          description: 'Interfaces that users love',
+        },
+        fast: {
+          title: 'Lightning Fast',
+          description: 'Optimized for performance',
+        },
+        care: {
+          title: 'We Care',
+          description: 'Your success is our mission',
+        },
+      },
     },
     services: {
       title: 'What We Do',
@@ -175,6 +195,26 @@ export const translations: Record<'en' | 'bg', Translation> = {
       title: 'Вашият Локален Уеб Партньор',
       subtitle: 'Помагаме на малките бизнеси да блестят онлайн! Красиви уебсайтове, светкавична доставка и цени, които няма да разбият банката. Нека развием вашия бизнес заедно.',
       cta: 'Да поговорим!',
+      badge: 'Създадено с',
+      badgeEnd: 'за вашия успех',
+      trustIndicators: {
+        clients: '50+ Доволни клиенти',
+        delivery: 'Бърза доставка',
+      },
+      cards: {
+        design: {
+          title: 'Красив дизайн',
+          description: 'Интерфейси, които потребителите обичат',
+        },
+        fast: {
+          title: 'Светкавично бърз',
+          description: 'Оптимизиран за производителност',
+        },
+        care: {
+          title: 'Ние се грижим',
+          description: 'Вашият успех е нашата мисия',
+        },
+      },
     },
     services: {
       title: 'Какво правим',

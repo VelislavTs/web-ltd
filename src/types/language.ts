@@ -14,6 +14,26 @@ export interface Translation {
     title: string;
     subtitle: string;
     cta: string;
+    badge: string;
+    badgeEnd: string;
+    trustIndicators: {
+      clients: string;
+      delivery: string;
+    };
+    cards: {
+      design: {
+        title: string;
+        description: string;
+      };
+      fast: {
+        title: string;
+        description: string;
+      };
+      care: {
+        title: string;
+        description: string;
+      };
+    };
   };
   services: {
     title: string;
