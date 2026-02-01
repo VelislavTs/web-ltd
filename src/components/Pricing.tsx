@@ -15,7 +15,7 @@ export default function Pricing() {
   }> = [
     {
       name: t.pricing.starter.name,
-      upfrontPrice: language === 'en' ? '$1,200' : '2,200 лв',
+      upfrontPrice: t.pricing.starter.upfrontPrice,
       monthlyPrice: t.pricing.starter.monthlyPrice,
       description: t.pricing.starter.description,
       features: t.pricing.starter.features,
@@ -23,7 +23,7 @@ export default function Pricing() {
     },
     {
       name: t.pricing.professional.name,
-      upfrontPrice: language === 'en' ? '$3,500' : '6,400 лв',
+      upfrontPrice: t.pricing.professional.upfrontPrice,
       monthlyPrice: t.pricing.professional.monthlyPrice,
       description: t.pricing.professional.description,
       features: t.pricing.professional.features,
@@ -70,7 +70,7 @@ export default function Pricing() {
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-                    Most Popular
+                    {language === "en" ? "Most Popular" : "Най-предпочитано"}
                   </span>
                 </div>
               )}
@@ -122,7 +122,7 @@ export default function Pricing() {
                     : 'bg-slate-100 hover:bg-slate-200 text-slate-900'
                 }`}
               >
-                Get Started
+                {language === "en" ? "Get Started" : "Да поговорим"}
               </button>
 
               <div className="space-y-3">

@@ -79,11 +79,13 @@ export interface Translation {
     starter: {
       name: string;
       description: string;
+      upfrontPrice: string;
       monthlyPrice: string;
       features: string[];
     };
     professional: {
       name: string;
+      upfrontPrice: string;
       description: string;
       monthlyPrice: string;
       features: string[];

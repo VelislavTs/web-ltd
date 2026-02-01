@@ -42,12 +42,6 @@ export default function Footer() {
                 {t.nav.services}
               </button>
               <button
-                onClick={() => scrollToSection('projects')}
-                className="block hover:text-blue-400 transition-colors"
-              >
-                {t.nav.projects}
-              </button>
-              <button
                 onClick={() => scrollToSection('about')}
                 className="block hover:text-blue-400 transition-colors"
               >

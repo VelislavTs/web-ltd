@@ -69,9 +69,6 @@ export default function Header() {
             <button onClick={() => scrollToSection('services')} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
               {t.nav.services}
             </button>
-            <button onClick={handleProjectsClick} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
-              {t.nav.projects}
-            </button>
             <button onClick={() => scrollToSection('about')} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
               {t.nav.about}
             </button>
