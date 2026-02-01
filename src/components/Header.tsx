@@ -56,6 +56,9 @@ export default function Header() {
             <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors">
               {t.nav.about}
             </button>
+            <button onClick={() => scrollToSection('process')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.process}
+            </button>
             <button onClick={() => scrollToSection('pricing')} className="text-slate-300 hover:text-white transition-colors">
               {t.nav.pricing}
             </button>
@@ -104,6 +107,12 @@ export default function Header() {
               className="block text-slate-300 hover:text-white transition-colors"
             >
               {t.nav.about}
+            </button>
+            <button
+              onClick={() => scrollToSection('process')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.process}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}

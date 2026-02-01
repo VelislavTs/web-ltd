@@ -7,6 +7,7 @@ export const translations: Record<'en' | 'bg', Translation> = {
       services: 'Services',
       projects: 'Projects',
       about: 'About',
+      process: 'Process',
       pricing: 'Pricing',
       contact: 'Contact',
     },
@@ -114,6 +115,33 @@ export const translations: Record<'en' | 'bg', Translation> = {
       note: 'You only pay for hosting ($5-15/month) and domain registration ($10-20/year)',
       cta: 'Apply for Non-Profit Program',
     },
+    process: {
+      title: 'How We Work',
+      subtitle: 'A transparent, proven process from concept to launch',
+      timeline: 'Typical timeline: 2-8 weeks depending on project scope',
+      steps: {
+        inquiry: {
+          title: 'Initial Inquiry',
+          description: 'Reach out through our contact form or email. Tell us about your project vision, goals, and timeline. We respond within 24 hours to schedule a consultation.',
+        },
+        meeting: {
+          title: 'Discovery Meeting',
+          description: 'A detailed consultation to understand your business, target audience, technical requirements, and design preferences. We discuss scope, timeline, and budget.',
+        },
+        information: {
+          title: 'Requirements Gathering',
+          description: 'We collect all necessary materials: content, branding assets, technical specifications, and third-party integrations. A clear project roadmap is established.',
+        },
+        prototype: {
+          title: 'Design & Development',
+          description: 'We create interactive prototypes and mockups for your approval. Once confirmed, our developers build your solution with regular progress updates and feedback loops.',
+        },
+        delivery: {
+          title: 'Launch & Partnership',
+          description: 'Final approval, testing, and deployment. We provide training, documentation, and ongoing support. Your success becomes our success.',
+        },
+      },
+    },
     contact: {
       title: 'Let\'s Build Something Amazing',
       subtitle: 'Get in touch to discuss your project',
@@ -133,6 +161,7 @@ export const translations: Record<'en' | 'bg', Translation> = {
       services: 'Услуги',
       projects: 'Проекти',
       about: 'За нас',
+      process: 'Процес',
       pricing: 'Цени',
       contact: 'Контакт',
     },
@@ -239,6 +268,33 @@ export const translations: Record<'en' | 'bg', Translation> = {
       ],
       note: 'Плащате само за хостинг (10-30 лв./месец) и регистрация на домейн (20-40 лв./година)',
       cta: 'Кандидатствайте за програмата за НПО',
+    },
+    process: {
+      title: 'Как работим',
+      subtitle: 'Прозрачен, проверен процес от концепция до стартиране',
+      timeline: 'Типичен срок: 2-8 седмици в зависимост от обхвата на проекта',
+      steps: {
+        inquiry: {
+          title: 'Първоначално запитване',
+          description: 'Свържете се с нас чрез контактната форма или имейл. Разкажете ни за вашата визия, цели и срокове. Отговаряме в рамките на 24 часа, за да насрочим консултация.',
+        },
+        meeting: {
+          title: 'Запознавателна среща',
+          description: 'Подробна консултация за разбиране на вашия бизнес, целева аудитория, технически изисквания и дизайн предпочитания. Обсъждаме обхват, срокове и бюджет.',
+        },
+        information: {
+          title: 'Събиране на информация',
+          description: 'Събираме всички необходими материали: съдържание, брандинг активи, технически спецификации и интеграции с трети страни. Установява се ясна пътна карта на проекта.',
+        },
+        prototype: {
+          title: 'Дизайн и разработка',
+          description: 'Създаваме интерактивни прототипи и макети за вашето одобрение. След потвърждение нашите разработчици изграждат решението с редовни актуализации и обратна връзка.',
+        },
+        delivery: {
+          title: 'Стартиране и партньорство',
+          description: 'Окончателно одобрение, тестване и внедряване. Предоставяме обучение, документация и текуща поддръжка. Вашият успех е наш успех.',
+        },
+      },
     },
     contact: {
       title: 'Нека създадем нещо невероятно',

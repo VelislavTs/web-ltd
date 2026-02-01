@@ -6,6 +6,7 @@ export interface Translation {
     services: string;
     projects: string;
     about: string;
+    process: string;
     pricing: string;
     contact: string;
   };
@@ -75,6 +76,33 @@ export interface Translation {
     features: string[];
     note: string;
     cta: string;
+  };
+  process: {
+    title: string;
+    subtitle: string;
+    timeline: string;
+    steps: {
+      inquiry: {
+        title: string;
+        description: string;
+      };
+      meeting: {
+        title: string;
+        description: string;
+      };
+      information: {
+        title: string;
+        description: string;
+      };
+      prototype: {
+        title: string;
+        description: string;
+      };
+      delivery: {
+        title: string;
+        description: string;
+      };
+    };
   };
   contact: {
     title: string;
