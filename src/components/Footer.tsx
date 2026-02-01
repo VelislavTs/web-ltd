@@ -104,7 +104,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
           <p>
-            &copy; {currentYear} Web Ltd. {t.footer.rights}
+            &copy; {currentYear} Web. {t.footer.rights}
           </p>
         </div>
       </div>

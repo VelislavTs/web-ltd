@@ -68,16 +68,16 @@ export default function Hero() {
               {/* Trust indicators */}
               <div className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-slate-600 animate-fade-in-slow">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Users className="text-blue-600" size={16} />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Users className="text-blue-600" size={32} />
                   </div>
-                  <span className="font-medium">{t.hero.trustIndicators.clients}</span>
+                  <span className="text-lg">{t.hero.trustIndicators.clients}</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Zap className="text-blue-600" size={16} />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Zap className="text-blue-600" size={32} />
                   </div>
-                  <span className="font-medium">{t.hero.trustIndicators.delivery}</span>
+                  <span className="text-lg">{t.hero.trustIndicators.delivery}</span>
                 </div>
               </div>
             </div>
