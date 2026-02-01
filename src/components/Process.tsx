@@ -60,7 +60,7 @@ export default function Process() {
                   index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'
                 }`}
               >
-                <div className={`flex items-center gap-8 ${
+                <div className={`flex items-start gap-8 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}>
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
@@ -81,14 +81,14 @@ export default function Process() {
                     </div>
                   </div>
 
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full items-center justify-center z-10">
+                  <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full items-center justify-center z-10">
                     <span className="text-blue-600 font-bold text-lg">{index + 1}</span>
                   </div>
 
                   <div className="flex-1 hidden md:block"></div>
                 </div>
 
-                <div className="md:hidden flex items-center gap-4 mt-4">
+                <div className="md:hidden flex items-center gap-4 mb-2 -mt-2">
                   <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold">{index + 1}</span>
                   </div>
