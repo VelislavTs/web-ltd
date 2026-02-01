@@ -261,27 +261,30 @@ export default function Process() {
               return (
                 <div key={index} className="relative flex items-start gap-6">
                   <div className="relative hidden md:flex w-16 h-16 flex-shrink-0">
-                    <BackgroundComponent />
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center shadow-md z-10 flex">
                       <span className="text-white font-bold text-xl relative z-10">{index + 1}</span>
                     </div>
                   </div>
 
                   <div className="relative flex md:hidden w-12 h-12 flex-shrink-0">
-                    <BackgroundComponent />
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center shadow-md z-10 flex">
                       <span className="text-white font-bold text-lg relative z-10">{index + 1}</span>
                     </div>
                   </div>
 
                   <div className="flex-1 relative z-[5]">
-                    <div className="bg-dough-50/50 border-2 border-dough-200 rounded-2xl p-6 md:p-8 hover:border-crust-300 hover:bg-white hover:shadow-lg transition-all">
-                      <h3 className="text-xl md:text-2xl font-bold text-grain-900 mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-grain-700 leading-relaxed">
-                        {step.description}
-                      </p>
+                    <div className="relative bg-dough-50/50 border-2 border-dough-200 rounded-2xl p-6 md:p-8 hover:border-crust-300 hover:bg-white hover:shadow-lg transition-all overflow-hidden">
+                      <div className="hidden md:block">
+                        <BackgroundComponent />
+                      </div>
+                      <div className="relative z-10">
+                        <h3 className="text-xl md:text-2xl font-bold text-grain-900 mb-2">
+                          {step.title}
+                        </h3>
+                        <p className="text-grain-700 leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
