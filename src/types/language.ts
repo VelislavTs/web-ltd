@@ -1,0 +1,91 @@
+export type Language = 'en' | 'bg';
+
+export interface Translation {
+  nav: {
+    home: string;
+    services: string;
+    projects: string;
+    about: string;
+    pricing: string;
+    contact: string;
+  };
+  hero: {
+    title: string;
+    subtitle: string;
+    cta: string;
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    customWebsites: {
+      title: string;
+      description: string;
+    };
+    webApps: {
+      title: string;
+      description: string;
+    };
+    digitalMarketing: {
+      title: string;
+      description: string;
+    };
+  };
+  projects: {
+    title: string;
+    subtitle: string;
+    viewProject: string;
+  };
+  about: {
+    title: string;
+    subtitle: string;
+    description: string[];
+    stats: {
+      years: string;
+      projects: string;
+      clients: string;
+      satisfaction: string;
+    };
+  };
+  pricing: {
+    title: string;
+    subtitle: string;
+    perMonth: string;
+    oneTime: string;
+    contact: string;
+    starter: {
+      name: string;
+      description: string;
+      features: string[];
+    };
+    professional: {
+      name: string;
+      description: string;
+      features: string[];
+    };
+    enterprise: {
+      name: string;
+      description: string;
+      features: string[];
+    };
+  };
+  nonprofit: {
+    title: string;
+    subtitle: string;
+    description: string;
+    features: string[];
+    note: string;
+    cta: string;
+  };
+  contact: {
+    title: string;
+    subtitle: string;
+    name: string;
+    email: string;
+    message: string;
+    send: string;
+  };
+  footer: {
+    tagline: string;
+    rights: string;
+  };
+}

@@ -1,0 +1,132 @@
+import { useState, useEffect } from 'react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import Logo from './Logo';
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'bg' : 'en');
+  };
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          <button
+            onClick={() => scrollToSection('home')}
+            className="hover:opacity-80 transition-opacity"
+          >
+            <Logo />
+          </button>
+
+          <nav className="hidden md:flex items-center space-x-8">
+            <button onClick={() => scrollToSection('home')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.home}
+            </button>
+            <button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.services}
+            </button>
+            <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.projects}
+            </button>
+            <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.about}
+            </button>
+            <button onClick={() => scrollToSection('pricing')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.pricing}
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors">
+              {t.nav.contact}
+            </button>
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors"
+            >
+              <Globe size={18} />
+              <span className="uppercase font-semibold">{language}</span>
+            </button>
+          </nav>
+
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {isMenuOpen && (
+          <nav className="md:hidden pb-6 space-y-4">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.home}
+            </button>
+            <button
+              onClick={() => scrollToSection('services')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.services}
+            </button>
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.projects}
+            </button>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.about}
+            </button>
+            <button
+              onClick={() => scrollToSection('pricing')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.pricing}
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="block text-slate-300 hover:text-white transition-colors"
+            >
+              {t.nav.contact}
+            </button>
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors"
+            >
+              <Globe size={18} />
+              <span className="uppercase font-semibold">{language}</span>
+            </button>
+          </nav>
+        )}
+      </div>
+    </header>
+  );
+}
