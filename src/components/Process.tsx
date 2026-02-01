@@ -84,7 +84,7 @@ export default function Process() {
                     </div>
                   </div>
 
-                  <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full items-center justify-center z-10">
+                  <div className="md:hidden absolute left-1/2 top-0 transform -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center z-10">
                     <span className="text-blue-600 font-bold text-lg">{index + 1}</span>
                   </div>
 
