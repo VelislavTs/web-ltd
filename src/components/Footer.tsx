@@ -13,40 +13,40 @@ export default function Footer() {
   };
 
   return (
-      <footer className="bg-slate-950 text-slate-300">
-        <div className="container mx-auto px-2 py-12">
-          <div className="grid md:grid-cols-3 gap-2 mb-2 text-center">
+      <footer className="bg-grain-900 text-dough-200">
+        <div className="container mx-auto px-6 py-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8 text-center">
             {/* Logo + tagline */}
             <div className="flex flex-col items-center">
               <div className="mb-4">
                 <Logo variant="dark" />
               </div>
-              <p className="text-slate-400 leading-relaxed max-w-xs">
+              <p className="text-dough-300 leading-relaxed max-w-xs">
                 {t.footer.tagline}
               </p>
             </div>
 
             {/* Quick links */}
             <div className="flex flex-col items-center">
-              <h4 className="text-white font-semibold mb-4">
+              <h4 className="text-dough-50 font-semibold mb-4">
                 {language === 'en' ? 'Quick Links' : 'Бързи връзки'}
               </h4>
               <nav className="space-y-2">
                 <button
                     onClick={() => scrollToSection('home')}
-                    className="block mx-auto hover:text-blue-400 transition-colors"
+                    className="block mx-auto hover:text-crust-400 transition-colors"
                 >
                   {t.nav.home}
                 </button>
                 <button
                     onClick={() => scrollToSection('services')}
-                    className="block mx-auto hover:text-blue-400 transition-colors"
+                    className="block mx-auto hover:text-crust-400 transition-colors"
                 >
                   {t.nav.services}
                 </button>
                 <button
                     onClick={() => scrollToSection('about')}
-                    className="block mx-auto hover:text-blue-400 transition-colors"
+                    className="block mx-auto hover:text-crust-400 transition-colors"
                 >
                   {t.nav.about}
                 </button>
@@ -55,17 +55,17 @@ export default function Footer() {
 
             {/* Services */}
             <div className="flex flex-col items-center">
-              <h4 className="text-white font-semibold mb-4">
+              <h4 className="text-dough-50 font-semibold mb-4">
                 {language === 'en' ? 'Services' : 'Услуги'}
               </h4>
               <ul className="space-y-2">
-                <li className="hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-crust-400 transition-colors cursor-pointer">
                   {t.services.customWebsites.title}
                 </li>
-                <li className="hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-crust-400 transition-colors cursor-pointer">
                   {t.services.webApps.title}
                 </li>
-                <li className="hover:text-blue-400 transition-colors cursor-pointer">
+                <li className="hover:text-crust-400 transition-colors cursor-pointer">
                   {t.services.digitalMarketing.title}
                 </li>
               </ul>
@@ -73,7 +73,7 @@ export default function Footer() {
 
           </div>
 
-          <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
+          <div className="border-t border-grain-800 pt-8 text-center text-dough-300">
             <p>&copy; {currentYear} Web. {t.footer.rights}</p>
           </div>
         </div>

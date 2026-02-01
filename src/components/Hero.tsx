@@ -1,4 +1,4 @@
-import { ArrowRight, Heart, Sparkles, Users, Zap } from 'lucide-react';
+import { ArrowRight, Circle, Users, Timer } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Hero() {
@@ -12,53 +12,45 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-white overflow-hidden">
-      {/* Animated gradient background with depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50">
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(to right, rgb(59, 130, 246) 1px, transparent 1px),
-              linear-gradient(to bottom, rgb(59, 130, 246) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px'
-          }}></div>
-        </div>
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-dough-100 via-dough-50 to-white">
+      {/* Subtle grain texture overlay */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        backgroundSize: '200px 200px',
+      }}></div>
 
-        {/* Floating geometric shapes with parallax effect */}
-        <div className="absolute top-20 left-[10%] w-64 h-64 bg-blue-400/10 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-[15%] w-96 h-96 bg-blue-500/5 rounded-full animate-float-delayed"></div>
-        <div className="absolute bottom-20 left-[20%] w-80 h-80 bg-blue-300/10 rounded-full animate-float-slow"></div>
+      {/* Warm floating orbs */}
+      <div className="absolute top-20 right-[10%] w-96 h-96 bg-gradient-to-br from-crust-200/40 to-transparent rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-[15%] w-80 h-80 bg-gradient-to-tr from-dough-300/30 to-transparent rounded-full blur-3xl animate-float-delayed"></div>
 
-        {/* Gradient orbs for depth */}
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-gradient-to-tr from-blue-500/15 to-transparent rounded-full blur-3xl animate-pulse-slower"></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left side - Main content */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full mb-6 shadow-sm border border-blue-100 animate-fade-in">
-                <span className="text-sm font-medium text-blue-900 flex items-center gap-1">
-                  {t.hero.badge} <Heart className="text-blue-500 inline-block" size={18} fill="currentColor" /> {t.hero.badgeEnd}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left content */}
+            <div className="text-center lg:text-left space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-5 py-2.5 rounded-full border border-dough-300/50 shadow-sm">
+                <Circle className="text-crust-500 fill-crust-500" size={8} />
+                <span className="text-sm font-medium text-grain-800">
+                  {t.hero.badge} <span className="text-crust-600">◆</span> {t.hero.badgeEnd}
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight animate-slide-up">
+              {/* Heading */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-grain-900 leading-[1.1] tracking-tight">
                 {t.hero.title}
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed animate-slide-up-delayed">
+              {/* Subheading */}
+              <p className="text-xl md:text-2xl text-grain-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 {t.hero.subtitle}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10 animate-slide-up-more-delayed">
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={scrollToContact}
-                  className="group inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:shadow-blue-500/50"
+                  className="group inline-flex items-center justify-center space-x-2 bg-grain-900 hover:bg-grain-800 text-dough-50 px-8 py-4 rounded-xl font-medium transition-all shadow-lg hover:shadow-xl hover:shadow-grain-900/20"
                 >
                   <span>{t.hero.cta}</span>
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -66,189 +58,92 @@ export default function Hero() {
               </div>
 
               {/* Trust indicators */}
-              <div className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-slate-600 animate-fade-in-slow">
-                <div className="flex items-center space-x-2">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Users className="text-blue-600" size={32} />
+              <div className="flex items-center justify-center lg:justify-start gap-8 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-crust-300 to-crust-400 flex items-center justify-center shadow-sm">
+                    <Users className="text-grain-800" size={20} strokeWidth={2.5} />
                   </div>
-                  <span className="text-lg">{t.hero.trustIndicators.clients}</span>
+                  <span className="text-sm text-grain-700 font-medium">{t.hero.trustIndicators.clients}</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <Zap className="text-blue-600" size={32} />
+                <div className="w-px h-8 bg-dough-300"></div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-dough-300 to-dough-400 flex items-center justify-center shadow-sm">
+                    <Timer className="text-grain-800" size={20} strokeWidth={2.5} />
                   </div>
-                  <span className="text-lg">{t.hero.trustIndicators.delivery}</span>
+                  <span className="text-sm text-grain-700 font-medium">{t.hero.trustIndicators.delivery}</span>
                 </div>
               </div>
             </div>
 
-            {/* Right side - Interactive 3D-style cards */}
-            <div className="hidden lg:block relative h-[600px]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Card 1 - Floating with depth */}
-                <div className="absolute top-8 -right-8 bg-white p-8 rounded-2xl shadow-2xl border border-blue-100 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-200/50 animate-float-card w-72">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Sparkles className="text-white" size={28} />
-                    </div>
+            {/* Right side - Simple cards */}
+            <div className="hidden lg:block relative h-[500px]">
+              {/* Card stack effect */}
+              <div className="absolute top-12 left-8 right-8 space-y-4">
+                {/* Card 1 */}
+                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-dough-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 rounded-full bg-crust-500 mt-1.5 flex-shrink-0"></div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.cards.design.title}</h3>
-                      <p className="text-sm text-slate-600">{t.hero.cards.design.description}</p>
+                      <h3 className="font-semibold text-grain-900 text-lg mb-1">{t.hero.cards.design.title}</h3>
+                      <p className="text-grain-600">{t.hero.cards.design.description}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Card 2 */}
-                <div className="absolute top-48 -left-8 bg-white p-8 rounded-2xl shadow-2xl border border-blue-100 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-200/50 animate-float-card-delayed w-72">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Zap className="text-white" size={28} />
-                    </div>
+                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-dough-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ml-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 rounded-full bg-dough-500 mt-1.5 flex-shrink-0"></div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.cards.fast.title}</h3>
-                      <p className="text-sm text-slate-600">{t.hero.cards.fast.description}</p>
+                      <h3 className="font-semibold text-grain-900 text-lg mb-1">{t.hero.cards.fast.title}</h3>
+                      <p className="text-grain-600">{t.hero.cards.fast.description}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Card 3 */}
-                <div className="absolute bottom-8 right-4 bg-white p-8 rounded-2xl shadow-2xl border border-blue-100 transform hover:scale-105 transition-all duration-500 hover:shadow-blue-200/50 animate-float-card-slow w-72">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <Heart className="text-white" size={28} fill="currentColor" />
-                    </div>
+                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border-2 border-dough-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ml-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-3 h-3 rounded-full bg-grain-700 mt-1.5 flex-shrink-0"></div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-lg mb-1">{t.hero.cards.care.title}</h3>
-                      <p className="text-sm text-slate-600">{t.hero.cards.care.description}</p>
+                      <h3 className="font-semibold text-grain-900 text-lg mb-1">{t.hero.cards.care.title}</h3>
+                      <p className="text-grain-600">{t.hero.cards.care.description}</p>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Central glow effect */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
+              {/* Decorative dots */}
+              <div className="absolute -right-4 top-1/4 flex flex-col gap-2">
+                <div className="w-2 h-2 rounded-full bg-crust-400"></div>
+                <div className="w-2 h-2 rounded-full bg-dough-400"></div>
+                <div className="w-2 h-2 rounded-full bg-crust-300"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-400 rounded-full mt-2"></div>
-        </div>
-      </div>
+      {/* Subtle bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
 
       <style>{`
         @keyframes float {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(20px, -20px); }
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(20px, -20px) scale(1.05); }
         }
 
         @keyframes float-delayed {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(-30px, 30px); }
-        }
-
-        @keyframes float-slow {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(15px, 25px); }
-        }
-
-        @keyframes float-card {
-          0%, 100% { transform: translateY(0px) rotate(2deg); }
-          50% { transform: translateY(-20px) rotate(2deg); }
-        }
-
-        @keyframes float-card-delayed {
-          0%, 100% { transform: translateY(0px) rotate(-2deg); }
-          50% { transform: translateY(-15px) rotate(-2deg); }
-        }
-
-        @keyframes float-card-slow {
-          0%, 100% { transform: translateY(0px) rotate(1deg); }
-          50% { transform: translateY(-25px) rotate(1deg); }
-        }
-
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.6; }
-        }
-
-        @keyframes pulse-slower {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.5; }
-        }
-
-        @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          50% { transform: translate(-20px, 20px) scale(1.1); }
         }
 
         .animate-float {
-          animation: float 8s ease-in-out infinite;
+          animation: float 15s ease-in-out infinite;
         }
 
         .animate-float-delayed {
-          animation: float-delayed 10s ease-in-out infinite;
-        }
-
-        .animate-float-slow {
-          animation: float-slow 12s ease-in-out infinite;
-        }
-
-        .animate-float-card {
-          animation: float-card 6s ease-in-out infinite;
-        }
-
-        .animate-float-card-delayed {
-          animation: float-card-delayed 7s ease-in-out infinite;
-        }
-
-        .animate-float-card-slow {
-          animation: float-card-slow 8s ease-in-out infinite;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse-slow 4s ease-in-out infinite;
-        }
-
-        .animate-pulse-slower {
-          animation: pulse-slower 6s ease-in-out infinite;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-        }
-
-        .animate-slide-up-delayed {
-          animation: slide-up 0.8s ease-out 0.2s forwards;
-          opacity: 0;
-        }
-
-        .animate-slide-up-more-delayed {
-          animation: slide-up 0.8s ease-out 0.4s forwards;
-          opacity: 0;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-
-        .animate-fade-in-slow {
-          animation: fade-in 1s ease-out 0.6s forwards;
-          opacity: 0;
+          animation: float-delayed 18s ease-in-out infinite;
         }
       `}</style>
     </section>

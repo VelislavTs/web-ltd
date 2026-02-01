@@ -1,4 +1,4 @@
-import { Award, Users, Target, TrendingUp } from 'lucide-react';
+import { Award, Users, Briefcase, Heart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function About() {
@@ -6,46 +6,48 @@ export default function About() {
 
   const stats = [
     { icon: Award, value: '5+', label: t.about.stats.years },
-    { icon: Target, value: '100+', label: t.about.stats.projects },
+    { icon: Briefcase, value: '100+', label: t.about.stats.projects },
     { icon: Users, value: '80+', label: t.about.stats.clients },
-    { icon: TrendingUp, value: '98%', label: t.about.stats.satisfaction },
+    { icon: Heart, value: '98%', label: t.about.stats.satisfaction },
   ];
 
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="container mx-auto px-8 md:px-12 lg:px-16 max-w-6xl">
-        <div className="text-center mb-12 pt-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">
+    <section id="about" className="py-24 bg-gradient-to-b from-dough-50 to-white">
+      <div className="container mx-auto px-6 max-w-5xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-grain-900 mb-4">
             {t.about.title}
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-2xl text-crust-600 font-medium">
             {t.about.subtitle}
           </p>
         </div>
 
-        <div className="space-y-5 mb-12">
-          {t.about.description.map((paragraph, index) => (
-            <p key={index} className="text-base text-slate-700 leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
+        <div className="bg-white/80 backdrop-blur-sm border-2 border-dough-200 rounded-2xl p-8 md:p-12 mb-12 shadow-lg">
+          <div className="space-y-6">
+            {t.about.description.map((paragraph, index) => (
+              <p key={index} className="text-lg text-grain-700 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors"
+              className="text-center p-6 bg-white border-2 border-dough-200 rounded-xl hover:border-crust-300 hover:shadow-lg transition-all"
             >
               <div className="flex justify-center mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <stat.icon className="text-blue-600" size={28} />
+                <div className="w-12 h-12 bg-gradient-to-br from-crust-300 to-crust-400 rounded-full flex items-center justify-center shadow-md">
+                  <stat.icon className="text-white" size={20} strokeWidth={2.5} />
                 </div>
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-2">
+              <div className="text-3xl font-bold text-grain-900 mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-grain-600 font-medium">
                 {stat.label}
               </div>
             </div>
