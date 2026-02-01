@@ -10,102 +10,118 @@ export default function Logo({ className = '', showText = true, variant = 'light
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
       <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
+        width="52"
+        height="52"
+        viewBox="0 0 52 52"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0"
       >
-        <path
-          d="M8 28C8 28 8 24 10 22C12 20 14 19 16 18.5C18 18 20 18 24 18C28 18 30 18 32 18.5C34 19 36 20 38 22C40 24 40 28 40 28C40 30 40 34 38 36C36 38 34 39 32 39.5C30 40 28 40 24 40C20 40 18 40 16 39.5C14 39 12 38 10 36C8 34 8 30 8 28Z"
+        <ellipse
+          cx="26"
+          cy="28"
+          rx="20"
+          ry="11"
           fill="url(#breadBody)"
         />
 
-        <ellipse cx="24" cy="21" rx="13" ry="7" fill="url(#breadTop)" />
+        <ellipse
+          cx="26"
+          cy="25"
+          rx="19"
+          ry="9"
+          fill="url(#breadTop)"
+        />
 
         <path
-          d="M18 24C18.5 23.5 19.5 23 21 23C22.5 23 23 23.5 23.5 24"
+          d="M13 22 L18 26"
           stroke="#8B6F47"
-          strokeWidth="1.2"
+          strokeWidth="2"
           strokeLinecap="round"
-          opacity="0.4"
+          opacity="0.5"
         />
         <path
-          d="M25 24C25.5 23.5 26.5 23 28 23C29.5 23 30 23.5 30.5 24"
+          d="M17 20 L22 24"
           stroke="#8B6F47"
-          strokeWidth="1.2"
+          strokeWidth="2"
           strokeLinecap="round"
-          opacity="0.4"
+          opacity="0.5"
+        />
+        <path
+          d="M22 19 L27 23"
+          stroke="#8B6F47"
+          strokeWidth="2"
+          strokeLinecap="round"
+          opacity="0.5"
+        />
+        <path
+          d="M28 19 L33 23"
+          stroke="#8B6F47"
+          strokeWidth="2"
+          strokeLinecap="round"
+          opacity="0.5"
+        />
+        <path
+          d="M34 20 L39 24"
+          stroke="#8B6F47"
+          strokeWidth="2"
+          strokeLinecap="round"
+          opacity="0.5"
         />
 
         <path
-          d="M20 20C20 20 22 18 24 18C26 18 28 20 28 20"
-          stroke="#A0826D"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M16 12C16 12 16.5 10 17 9"
-          stroke="#DC6316"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
-        />
-        <path
-          d="M20 10C20 10 20.5 8 21 7"
+          d="M16 8C16 8 17 6 18 5"
           stroke="#DC6316"
           strokeWidth="1.5"
           strokeLinecap="round"
           opacity="0.5"
         />
         <path
-          d="M24 9C24 9 24.5 7 25 6"
+          d="M22 6C22 6 23 4 24 3"
           stroke="#DC6316"
           strokeWidth="1.5"
           strokeLinecap="round"
           opacity="0.6"
         />
         <path
-          d="M28 10C28 10 28.5 8 29 7"
+          d="M28 6C28 6 29 4 30 3"
+          stroke="#DC6316"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+        <path
+          d="M34 8C34 8 35 6 36 5"
           stroke="#DC6316"
           strokeWidth="1.5"
           strokeLinecap="round"
           opacity="0.5"
-        />
-        <path
-          d="M32 12C32 12 32.5 10 33 9"
-          stroke="#DC6316"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          opacity="0.6"
         />
 
         <defs>
           <linearGradient
             id="breadBody"
-            x1="24"
-            y1="18"
-            x2="24"
-            y2="40"
+            x1="26"
+            y1="17"
+            x2="26"
+            y2="39"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#E8A05D" />
-            <stop offset="0.4" stopColor="#D68937" />
-            <stop offset="1" stopColor="#B86B28" />
+            <stop stopColor="#E09B4A" />
+            <stop offset="0.5" stopColor="#C67B2E" />
+            <stop offset="1" stopColor="#A66424" />
           </linearGradient>
           <linearGradient
             id="breadTop"
-            x1="24"
-            y1="14"
-            x2="24"
-            y2="28"
+            x1="26"
+            y1="16"
+            x2="26"
+            y2="34"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F4C67A" />
-            <stop offset="0.6" stopColor="#E09B4A" />
-            <stop offset="1" stopColor="#D68937" />
+            <stop stopColor="#F5D4A0" />
+            <stop offset="0.4" stopColor="#E8B870" />
+            <stop offset="1" stopColor="#D69B4A" />
           </linearGradient>
         </defs>
       </svg>
