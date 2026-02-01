@@ -12,9 +12,9 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-2 bg-white">
+    <section id="about" className="py-16 bg-white">
       <div className="container mx-auto px-8 md:px-12 lg:px-16 max-w-6xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-6">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5">
             {t.about.title}
           </h2>
