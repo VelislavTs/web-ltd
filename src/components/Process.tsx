@@ -2,49 +2,47 @@ import { Circle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const FlourBackground = () => (
-  <svg width="300" height="150" viewBox="0 0 300 150" className="absolute -right-24 -top-12 opacity-40 pointer-events-none z-0">
-    <circle cx="80" cy="30" r="3" fill="#E8A05D" />
-    <circle cx="120" cy="20" r="2.5" fill="#F0A044" />
-    <circle cx="150" cy="40" r="3.5" fill="#DC6316" />
-    <circle cx="100" cy="50" r="2" fill="#E8A05D" />
-    <circle cx="140" cy="65" r="3" fill="#F0A044" />
-    <circle cx="180" cy="45" r="2.5" fill="#DC6316" />
-    <circle cx="110" cy="75" r="3.5" fill="#E8A05D" />
-    <circle cx="170" cy="80" r="2" fill="#F0A044" />
-    <circle cx="200" cy="60" r="3" fill="#DC6316" />
-    <circle cx="65" cy="60" r="2.5" fill="#E8A05D" />
-    <circle cx="190" cy="35" r="2" fill="#F0A044" />
-    <circle cx="95" cy="85" r="2.5" fill="#DC6316" />
-    <circle cx="220" cy="50" r="3" fill="#E8A05D" />
-    <circle cx="130" cy="90" r="2.5" fill="#F0A044" />
-    <circle cx="240" cy="70" r="2" fill="#DC6316" />
-    <circle cx="160" cy="25" r="2" fill="#E8A05D" />
-    <circle cx="205" cy="75" r="2.5" fill="#F0A044" />
-    <circle cx="75" cy="70" r="2" fill="#DC6316" />
-    <circle cx="185" cy="55" r="2.5" fill="#E8A05D" />
-    <circle cx="125" cy="45" r="2" fill="#F0A044" />
+  <svg width="150" height="100" viewBox="0 0 150 100" className="absolute -left-12 top-0 opacity-50 pointer-events-none z-0">
+    <circle cx="40" cy="30" r="3" fill="#E8A05D" />
+    <circle cx="60" cy="20" r="2.5" fill="#F0A044" />
+    <circle cx="75" cy="40" r="3.5" fill="#DC6316" />
+    <circle cx="50" cy="50" r="2" fill="#E8A05D" />
+    <circle cx="70" cy="60" r="3" fill="#F0A044" />
+    <circle cx="90" cy="45" r="2.5" fill="#DC6316" />
+    <circle cx="55" cy="70" r="3.5" fill="#E8A05D" />
+    <circle cx="85" cy="75" r="2" fill="#F0A044" />
+    <circle cx="100" cy="55" r="3" fill="#DC6316" />
+    <circle cx="33" cy="55" r="2.5" fill="#E8A05D" />
+    <circle cx="95" cy="35" r="2" fill="#F0A044" />
+    <circle cx="48" cy="80" r="2.5" fill="#DC6316" />
+    <circle cx="110" cy="50" r="3" fill="#E8A05D" />
+    <circle cx="65" cy="85" r="2.5" fill="#F0A044" />
+    <circle cx="120" cy="65" r="2" fill="#DC6316" />
+    <circle cx="80" cy="25" r="2" fill="#E8A05D" />
+    <circle cx="103" cy="70" r="2.5" fill="#F0A044" />
+    <circle cx="38" cy="65" r="2" fill="#DC6316" />
   </svg>
 );
 
 const BowlWithDoughBackground = () => (
-  <svg width="300" height="150" viewBox="0 0 300 150" className="absolute -right-24 -top-12 opacity-40 pointer-events-none z-0">
+  <svg width="180" height="140" viewBox="0 0 180 140" className="absolute -left-20 -top-4 opacity-50 pointer-events-none z-0">
     <path
-      d="M40 60 Q45 80 55 90 Q65 100 120 100 Q175 100 185 90 Q195 80 200 60 L200 50 Q200 47 195 45 Q185 40 120 40 Q55 40 45 45 Q40 47 40 50 Z"
+      d="M30 55 Q33 70 40 80 Q48 90 90 90 Q132 90 140 80 Q147 70 150 55 L150 47 Q150 45 147 43 Q140 38 90 38 Q40 38 33 43 Q30 45 30 47 Z"
       fill="url(#bowlGradient)"
       stroke="#8B6F47"
       strokeWidth="2"
     />
-    <ellipse cx="120" cy="50" rx="60" ry="18" fill="#F4C67A" />
-    <ellipse cx="120" cy="47" rx="50" ry="14" fill="#F5D4A0" opacity="0.8" />
+    <ellipse cx="90" cy="47" rx="55" ry="16" fill="#F4C67A" />
+    <ellipse cx="90" cy="45" rx="45" ry="13" fill="#F5D4A0" opacity="0.8" />
     <path
-      d="M70 50 Q85 42 100 41 Q120 40 140 41 Q155 42 170 50"
+      d="M50 47 Q62 40 75 39 Q90 38 105 39 Q118 40 130 47"
       stroke="#E8B870"
       strokeWidth="2"
       fill="none"
       opacity="0.7"
     />
     <defs>
-      <linearGradient id="bowlGradient" x1="120" y1="40" x2="120" y2="100">
+      <linearGradient id="bowlGradient" x1="90" y1="38" x2="90" y2="90">
         <stop offset="0%" stopColor="#A0826D" opacity="0.3" />
         <stop offset="50%" stopColor="#8B6F47" opacity="0.5" />
         <stop offset="100%" stopColor="#6B5437" opacity="0.6" />
@@ -54,46 +52,46 @@ const BowlWithDoughBackground = () => (
 );
 
 const DoughBallBackground = () => (
-  <svg width="300" height="150" viewBox="0 0 300 150" className="absolute -right-24 -top-12 opacity-40 pointer-events-none z-0">
-    <circle cx="120" cy="60" r="50" fill="url(#doughGradient)" />
-    <ellipse cx="120" cy="48" rx="38" ry="18" fill="#F4C67A" opacity="0.6" />
+  <svg width="180" height="140" viewBox="0 0 180 140" className="absolute -left-20 -top-8 opacity-50 pointer-events-none z-0">
+    <circle cx="90" cy="70" r="45" fill="url(#doughGradient)" />
+    <ellipse cx="90" cy="60" rx="35" ry="16" fill="#F4C67A" opacity="0.6" />
     <path
-      d="M95 52 Q98 56 105 58"
+      d="M68 63 Q71 67 77 69"
       stroke="#D6C19C"
       strokeWidth="2"
       fill="none"
       opacity="0.6"
     />
     <path
-      d="M135 58 Q142 56 145 52"
+      d="M103 69 Q109 67 112 63"
       stroke="#D6C19C"
       strokeWidth="2"
       fill="none"
       opacity="0.6"
     />
     <path
-      d="M105 70 Q112 74 120 74 Q128 74 135 70"
+      d="M77 80 Q83 84 90 84 Q97 84 103 80"
       stroke="#D6C19C"
       strokeWidth="2.5"
       fill="none"
       opacity="0.5"
     />
     <path
-      d="M90 62 Q93 66 97 68"
+      d="M65 72 Q68 76 72 78"
       stroke="#D6C19C"
       strokeWidth="1.5"
       fill="none"
       opacity="0.5"
     />
     <path
-      d="M143 68 Q147 66 150 62"
+      d="M108 78 Q112 76 115 72"
       stroke="#D6C19C"
       strokeWidth="1.5"
       fill="none"
       opacity="0.5"
     />
-    <ellipse cx="105" cy="55" rx="6" ry="4" fill="#E8D4B0" opacity="0.4" />
-    <ellipse cx="135" cy="55" rx="6" ry="4" fill="#E8D4B0" opacity="0.4" />
+    <ellipse cx="78" cy="65" rx="6" ry="4" fill="#E8D4B0" opacity="0.4" />
+    <ellipse cx="102" cy="65" rx="6" ry="4" fill="#E8D4B0" opacity="0.4" />
     <defs>
       <radialGradient id="doughGradient">
         <stop offset="0%" stopColor="#F4E5C7" />
@@ -105,107 +103,101 @@ const DoughBallBackground = () => (
 );
 
 const DoughKnotsBackground = () => (
-  <svg width="300" height="150" viewBox="0 0 300 150" className="absolute -right-24 -top-12 opacity-40 pointer-events-none z-0">
+  <svg width="200" height="180" viewBox="0 0 200 180" className="absolute -left-16 -top-6 opacity-60 pointer-events-none z-0">
+    <ellipse cx="70" cy="90" rx="35" ry="25" fill="#E8D4B0" opacity="0.8" />
+    <ellipse cx="60" cy="90" rx="30" ry="20" fill="#F4E5C7" opacity="0.7" />
+    <ellipse cx="80" cy="90" rx="30" ry="20" fill="#F4E5C7" opacity="0.7" />
+
+    <ellipse cx="110" cy="85" rx="28" ry="20" fill="#E8D4B0" opacity="0.8" />
+    <ellipse cx="100" cy="85" rx="24" ry="16" fill="#F4E5C7" opacity="0.7" />
+    <ellipse cx="120" cy="85" rx="24" ry="16" fill="#F4E5C7" opacity="0.7" />
+
+    <ellipse cx="90" cy="115" rx="32" ry="22" fill="#E8D4B0" opacity="0.8" />
+    <ellipse cx="80" cy="115" rx="27" ry="18" fill="#F4E5C7" opacity="0.7" />
+    <ellipse cx="100" cy="115" rx="27" ry="18" fill="#F4E5C7" opacity="0.7" />
+
     <path
-      d="M60 35 Q67 28 78 30 Q86 32 90 38 Q94 45 92 51 Q90 57 82 60 Q75 62 69 58 Q64 54 62 47 Q61 41 63 37"
-      fill="#E8D4B0"
+      d="M65 85 Q70 82 75 83"
       stroke="#D6C19C"
-      strokeWidth="2.5"
-    />
-    <path
-      d="M71 40 Q75 38 78 39"
-      stroke="#C9B89A"
-      strokeWidth="1.2"
+      strokeWidth="2"
       fill="none"
-      opacity="0.6"
+      opacity="0.5"
     />
     <path
-      d="M120 48 Q127 41 138 43 Q146 45 150 51 Q154 58 152 64 Q150 70 142 73 Q135 75 129 71 Q124 67 122 60 Q121 54 124 50"
-      fill="#E8D4B0"
+      d="M105 80 Q110 77 115 78"
       stroke="#D6C19C"
-      strokeWidth="2.5"
-    />
-    <path
-      d="M131 53 Q135 51 138 52"
-      stroke="#C9B89A"
-      strokeWidth="1.2"
+      strokeWidth="2"
       fill="none"
-      opacity="0.6"
+      opacity="0.5"
     />
     <path
-      d="M86 75 Q93 68 104 70 Q112 72 116 78 Q120 85 118 91 Q116 97 108 100 Q101 102 95 98 Q90 94 88 87 Q87 81 90 77"
-      fill="#E8D4B0"
+      d="M85 110 Q90 107 95 108"
       stroke="#D6C19C"
-      strokeWidth="2.5"
-    />
-    <path
-      d="M97 80 Q101 78 104 79"
-      stroke="#C9B89A"
-      strokeWidth="1.2"
+      strokeWidth="2"
       fill="none"
-      opacity="0.6"
+      opacity="0.5"
     />
   </svg>
 );
 
 const ReadyBreadBackground = () => (
-  <svg width="300" height="150" viewBox="0 0 300 150" className="absolute -right-24 -top-12 opacity-40 pointer-events-none z-0">
+  <svg width="280" height="180" viewBox="0 0 280 180" className="absolute -left-32 -top-16 opacity-70 pointer-events-none z-0">
     <ellipse
-      cx="120"
-      cy="65"
-      rx="68"
-      ry="28"
+      cx="140"
+      cy="110"
+      rx="110"
+      ry="50"
       fill="url(#breadGradient2)"
     />
     <ellipse
-      cx="120"
-      cy="58"
-      rx="64"
-      ry="22"
+      cx="140"
+      cy="95"
+      rx="105"
+      ry="40"
       fill="url(#breadTopGradient)"
     />
     <path
-      d="M65 50 L85 65"
+      d="M65 80 L95 105"
       stroke="#8B6F47"
-      strokeWidth="3"
+      strokeWidth="4"
       strokeLinecap="round"
       opacity="0.6"
     />
     <path
-      d="M85 48 L105 63"
+      d="M95 75 L125 100"
       stroke="#8B6F47"
-      strokeWidth="3"
+      strokeWidth="4"
       strokeLinecap="round"
       opacity="0.6"
     />
     <path
-      d="M105 47 L125 62"
+      d="M125 72 L155 97"
       stroke="#8B6F47"
-      strokeWidth="3"
+      strokeWidth="4"
       strokeLinecap="round"
       opacity="0.6"
     />
     <path
-      d="M125 47 L145 62"
+      d="M155 72 L185 97"
       stroke="#8B6F47"
-      strokeWidth="3"
+      strokeWidth="4"
       strokeLinecap="round"
       opacity="0.6"
     />
     <path
-      d="M145 48 L165 63"
+      d="M185 75 L215 100"
       stroke="#8B6F47"
-      strokeWidth="3"
+      strokeWidth="4"
       strokeLinecap="round"
       opacity="0.6"
     />
     <defs>
-      <linearGradient id="breadGradient2" x1="120" y1="37" x2="120" y2="93">
+      <linearGradient id="breadGradient2" x1="140" y1="60" x2="140" y2="160">
         <stop offset="0%" stopColor="#E09B4A" />
         <stop offset="50%" stopColor="#C67B2E" />
         <stop offset="100%" stopColor="#A66424" />
       </linearGradient>
-      <linearGradient id="breadTopGradient" x1="120" y1="36" x2="120" y2="80">
+      <linearGradient id="breadTopGradient" x1="140" y1="55" x2="140" y2="135">
         <stop offset="0%" stopColor="#F5D4A0" />
         <stop offset="40%" stopColor="#E8B870" />
         <stop offset="100%" stopColor="#D69B4A" />
@@ -268,14 +260,18 @@ export default function Process() {
               const BackgroundComponent = backgroundComponents[index];
               return (
                 <div key={index} className="relative flex items-start gap-6">
-                  <div className="relative hidden md:flex w-16 h-16 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center flex-shrink-0 shadow-md z-10 overflow-visible">
+                  <div className="relative hidden md:flex w-16 h-16 flex-shrink-0">
                     <BackgroundComponent />
-                    <span className="text-white font-bold text-xl relative z-10">{index + 1}</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center shadow-md z-10 flex">
+                      <span className="text-white font-bold text-xl relative z-10">{index + 1}</span>
+                    </div>
                   </div>
 
-                  <div className="relative flex md:hidden w-12 h-12 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center flex-shrink-0 shadow-md z-10 overflow-visible">
+                  <div className="relative flex md:hidden w-12 h-12 flex-shrink-0">
                     <BackgroundComponent />
-                    <span className="text-white font-bold text-lg relative z-10">{index + 1}</span>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-crust-400 to-crust-500 items-center justify-center shadow-md z-10 flex">
+                      <span className="text-white font-bold text-lg relative z-10">{index + 1}</span>
+                    </div>
                   </div>
 
                   <div className="flex-1 relative z-[5]">
