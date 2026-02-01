@@ -64,14 +64,17 @@ export default function Process() {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}>
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+                    <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-shadow relative">
+                      <div className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-white font-bold text-lg">{index + 1}</span>
+                      </div>
                       <div className={`flex items-center gap-4 mb-4 ${
                         index % 2 === 0 ? 'md:flex-row-reverse md:justify-end' : ''
                       }`}>
                         <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center flex-shrink-0`}>
                           <step.icon className="text-white" size={28} />
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900">
+                        <h3 className="text-2xl font-bold text-slate-900 pr-12">
                           {step.title}
                         </h3>
                       </div>
@@ -86,12 +89,6 @@ export default function Process() {
                   </div>
 
                   <div className="flex-1 hidden md:block"></div>
-                </div>
-
-                <div className="md:hidden flex items-center gap-4 mb-2 -mt-2">
-                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">{index + 1}</span>
-                  </div>
                 </div>
               </div>
             ))}

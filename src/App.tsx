@@ -1,28 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Projects from './components/Projects';
-import About from './components/About';
-import Process from './components/Process';
-import Pricing from './components/Pricing';
-import NonProfit from './components/NonProfit';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <Services />
-      <Projects />
-      <About />
-      <Process />
-      <Pricing />
-      <NonProfit />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

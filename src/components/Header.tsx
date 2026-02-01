@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Logo from './Logo';
@@ -7,6 +8,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +20,27 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsMenuOpen(false);
+  };
+
+  const handleProjectsClick = () => {
+    navigate('/projects');
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleLanguage = () => {
@@ -50,7 +69,7 @@ export default function Header() {
             <button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-white transition-colors">
               {t.nav.services}
             </button>
-            <button onClick={() => scrollToSection('projects')} className="text-slate-300 hover:text-white transition-colors">
+            <button onClick={handleProjectsClick} className="text-slate-300 hover:text-white transition-colors">
               {t.nav.projects}
             </button>
             <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors">
@@ -97,7 +116,7 @@ export default function Header() {
               {t.nav.services}
             </button>
             <button
-              onClick={() => scrollToSection('projects')}
+              onClick={handleProjectsClick}
               className="block text-slate-300 hover:text-white transition-colors"
             >
               {t.nav.projects}
